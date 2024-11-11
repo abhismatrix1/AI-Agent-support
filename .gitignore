@@ -1,0 +1,14 @@
+# Environment variables - since they contain sensitive API keys
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.DS_Store
+report_final7.md
+report_intermediate.md
+index.html
+

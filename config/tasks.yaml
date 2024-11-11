@@ -1,0 +1,20 @@
+l1_support_agent_task:
+  description: >
+    When user asks anything related to company, you need to do the following:
+    1. There are documents available which contains company policies, FAQs, how to do things, description of api, etc. you should
+    refer to these documents to understand the company and its policies. 
+    2. There are tools available using which you can extract data from company internal system. Use these tools to extract relevant data to answer user queries.
+    3. You may have to use many tools together to answer the user query.
+    4. Never communicate anything which is angainst the company policies.
+
+  expected_output: >
+    All the information required to answer the user query. if answer is not found in internal documents or internal tools then tell the next agent accordingly. If you need more info from user then ask for it.
+  agent: l1_support_agent
+
+responder_agent_task:
+  description: >
+    Review the context you got and generate the reply as asked by the user.
+    
+  expected_output: >
+    chat reply
+  agent: responder_agent
